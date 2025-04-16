@@ -1,0 +1,35 @@
+name: Atualizar calendário dos Los Aliens
+
+on:
+  schedule:
+    - cron: '0 7 * * *'  # Corre todos os dias às 7h da manhã (hora de Lisboa)
+  workflow_dispatch:      # Permite correr manualmente também
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Fazer checkout do repositório
+        uses: actions/checkout@v3
+
+      - name: Instalar Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Instalar dependências
+        run: |
+          pip install requests beautifulsoup4 ics pytz
+
+      - name: Correr o script de atualização
+        run: python update_calendar.py
+
+      - name: Fazer commit e push das alterações
+        run: |
+          git config --global user.name "github-actions"
+          git config --global user.email "github-actions@github.com"
+          git add los_aliens_kings_league.ics
+          git commit -m "Atualização automática do calendário"
+          git push
+        continue-on-error: true
