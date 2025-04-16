@@ -1,0 +1,26 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Los Aliens - Kings League
+X-WR-TIMEZONE:Europe/Lisbon
+BEGIN:VEVENT
+UID:202504210300-losaliens@kingsleague
+SUMMARY:Los Aliens vs Peluche Caligari
+DTSTART;TZID=Europe/Lisbon:20250421T030000
+DTEND;TZID=Europe/Lisbon:20250421T040000
+DESCRIPTION:Jogo da Kings League Américas
+END:VEVENT
+BEGIN:VEVENT
+UID:202504280000-losaliens@kingsleague
+SUMMARY:Los Aliens vs Raniza FC
+DTSTART;VALUE=DATE:20250428
+DESCRIPTION:Jogo da Kings League Américas (hora por confirmar)
+END:VEVENT
+BEGIN:VEVENT
+UID:202505050000-losaliens@kingsleague
+SUMMARY:Los Aliens vs Club de Cuervos
+DTSTART;VALUE=DATE:20250505
+DESCRIPTION:Jogo da Kings League Américas (hora por confirmar)
+END:VEVENT
+END:VCALENDAR
